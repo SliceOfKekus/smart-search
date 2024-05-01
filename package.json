@@ -1,6 +1,6 @@
 {
-  "name": "smart-search",
-  "displayName": "smart-search",
+  "name": "tagged-search",
+  "displayName": "tagged-search",
   "description": "This extension allow you search on stackoverflow with tags",
   "version": "0.0.1",
   "engines": {
@@ -16,12 +16,21 @@
       {
         "command": "tagged-search.stackoverflowSearch",
         "title": "Have question? Stackoverflow is answer."
+      },
+      {
+        "command": "tagged-search.stackoverflowFastSearch",
+        "title": "Fast Question and Furious Answer."
       }
     ],
     "keybindings": [
       {
         "command": "tagged-search.stackoverflowSearch",
         "key": "ctrl+shift+\\",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "tagged-search.stackoverflowFastSearch",
+        "key": "ctrl+shift+q",
         "when": "editorTextFocus"
       }
     ]

@@ -91,6 +91,30 @@ export function activate(context: ExtensionContext) {
 
 	env.openExternal(uri);
 	});
+
+	context.subscriptions.push(searchCommand);
+
+	let quickSearchCommand = commands.registerCommand('tagged-search.stackoverflowFastSearch', () => {
+		let editor = window.activeTextEditor;
+
+		if (!editor) {
+			return;
+		}
+
+		const selection = editor.selection;
+
+		if (selection.isEmpty) {
+			return;
+		}
+		
+		const query = editor.document.getText(selection);
+		const tag = "%5B" + editor.document.languageId + "%5D";
+		const path = "https://stackoverflow.com/search?q=" + tag + query;
+
+		env.openExternal(Uri.parse(path));
+	});
+
+	context.subscriptions.push(quickSearchCommand);
 }
 
 export function deactivate() {
