@@ -14,8 +14,15 @@
   "contributes": {
     "commands": [
       {
-        "command": "smart-search.helloWorld",
-        "title": "Hello World"
+        "command": "tagged-search.stackoverflowSearch",
+        "title": "Have question? Stackoverflow is answer."
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "tagged-search.stackoverflowSearch",
+        "key": "ctrl+shift+\\",
+        "when": "editorTextFocus"
       }
     ]
   },
