@@ -2,7 +2,7 @@
   "name": "tagged-search",
   "displayName": "tagged-search",
   "description": "This extension allow you search on stackoverflow with tags",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.88.0"
   },
